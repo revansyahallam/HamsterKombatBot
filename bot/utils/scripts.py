@@ -254,14 +254,15 @@ async def get_promo_code(app_token: str,
                     promo_code = response_json.get("promoCode")
 
                     if promo_code:
-                        logger.info(f"{session_name} | "
-                                    f"Promo code is found for <lm>{promo_title}</lm> game: <lc>{promo_code}</lc>")
+                        # logger.info(f"{session_name} | "
+                        #             f"Promo code is found for <lm>{promo_title}</lm> game: <lc>{promo_code}</lc>")
                         return promo_code
             except Exception as error:
                 logger.debug(f"{session_name} | Error while getting promo code: {error}")
 
             attempts += 1
 
+            # ЗАЧЕМ ЭТО ВПРИНЦИПЕ ТУТ!!!
             logger.debug(
                 f"{session_name} | Attempt <lr>{attempts}</lr> was successful for <lm>{promo_title}</lm> game | "
                 f"Sleep <lw>{event_timeout}s</lw> before <lr>{attempts + 1}</lr> attempt to get promo code")

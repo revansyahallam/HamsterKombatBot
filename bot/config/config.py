@@ -25,6 +25,9 @@ class Settings(BaseSettings):
     APPLY_DAILY_REWARD: bool = True
     APPLY_DAILY_ENERGY: bool = True
     APPLY_DAILY_MINI_GAME: bool = True
+    
+    AUTO_BUY_SKINS: bool = False
+    MAX_PRICE_SKIN: int = 1000000
 
     USE_RANDOM_MINI_GAME_KEY: bool = True
 
